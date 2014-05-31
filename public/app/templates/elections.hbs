@@ -1,0 +1,18 @@
+<h1>Elections</h1>
+
+{{#each item in candidates}}
+  <p>Election name: {{item.election.name}}</p>
+  <p>Election description: {{item.election.description}}</p>
+
+  <h2>Candidates:</h2>
+  <ul>
+    {{#each candidate in item.candidates}}
+    <li>Name: {{candidate.name}} {{#link-to 'candidate'}}Link{{/link-to}}</li>
+    {{/each}}
+  </ul>
+{{/each}}
+
+<ul>
+</ul>
+
+{{outlet}}

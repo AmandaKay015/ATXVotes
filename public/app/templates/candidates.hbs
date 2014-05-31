@@ -1,0 +1,9 @@
+<h1>Candidates</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'candidate' this}}{{this.id}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
