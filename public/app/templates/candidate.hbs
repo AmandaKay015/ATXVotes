@@ -7,18 +7,26 @@
   <div class="row">
     <div class="one-third"><img {{bind-attr src=image alt=name}}></div>
     <div class="two-thirds">
-      <h4>Occupation</h4>
-      <p>{{occupation}}</p>
-      <h4>Experience</h4>
-      <p>{{experience}}</p>
+      <div class="content-row">
+        <div class="one-third">
+          <h4>Occupation</h4>
+          <h4>Experience</h4>
+        </div>
+        <div class="two-thirds">
+          <p>{{occupation}}</p>
+          <p>{{experience}}</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="content-row">
-    <h2>Platform</h2>
-    <ul class="platform menu">
-      <li>Platform item</li>
-      <li>Platform item 2</li>
+    <h2 class="one-third">Platform</h2>
+    <ul class="platform menu two-thirds">
+      {{#each issue in issues}}
+        <li>{{issue.title}}</li>
+        <li>{{issue.description}}</li>
+      {{/each}}
     </ul>
     <h4>Website</h4>
     <p><a {{bind-attr href=url}}>{{url}}</a></p>
