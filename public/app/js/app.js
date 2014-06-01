@@ -1,6 +1,5 @@
 //(function($) {
   'use strict';
-  console.log("hello, world");
 
   function show_modal(el) {
     var $modal = $(el).parent('.page-modal'),
