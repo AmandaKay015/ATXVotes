@@ -1,6 +1,10 @@
 <?php
 
-class HomeController extends BaseController {
+namespace App\Controllers;
+
+use View;
+
+class HomeController extends \BaseController {
 
 	/*
 	|--------------------------------------------------------------------------

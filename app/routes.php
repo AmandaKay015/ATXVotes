@@ -11,7 +11,24 @@
 |
 */
 
-Route::get('/', function()
+
+
+/*=============================================
+=                  API Routes                 =
+=============================================*/
+
+Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), function () {
+    Route::resource('candidates', 'CandidatesController', array('except' => array('create', 'edit')));
+    // Route::resource('elections', 'ElectionController', array('except' => array('create', 'edit')));
+    
+    Route::get('/elections/{id}/{district?}', array('uses' => 'ElectionController@show'));
+});
+
+
+/*=============================================
+=                  Catch-All                  =
+=============================================*/
+Route::any('{path?}', function() 
 {
-	return View::make('hello');
+    return View::make('hello'); // replace hello with index when the time comes
 });
