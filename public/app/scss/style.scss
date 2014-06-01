@@ -12,6 +12,8 @@
     text-indent: -999px;
     overflow: hidden;
     background: #888;
+    background: url(../images/ATXVotes_Logo.png);
+    background-size: contain;
   }
   .fade-in {
     position: relative;
@@ -55,7 +57,9 @@
     height: 80px;
     text-indent: -999px;
     background: #888;
-    overflow: hidden;
+    overflow: hidden;    
+    background: url(../images/ATXVotes_Logo.png);
+    background-size: contain;
   }
   .main-nav {
     float: right;
