@@ -45,7 +45,7 @@ class ElectionController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id, $district = null)
+	public function show($id)
 	{
 		$election     = $this->election->find($id);
 		$candidateIds = $this->candidate->getCandidateIds($id);
