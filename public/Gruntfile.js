@@ -45,6 +45,7 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '.tmp/scripts/*.js',
+                    '.tmp/js/*.js',
                     '<%= yeoman.app %>/*.html',
                     '{.tmp,<%= yeoman.app %>}/css/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -274,6 +275,20 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+            data: {
+                files: [
+                    { 
+                        expand: true,
+                        flatten: true,
+                        filter: 'isFile',
+                        cwd: '<%= yeoman.app %>',
+                        dest: '<%= yeoman.app %>',
+                        src: [
+                            'js/districts.json'
+                        ]
+                    }
+                ]
+            },
             dist: {
                 files: [
                     {
@@ -285,7 +300,8 @@ module.exports = function (grunt) {
                             '*.{ico,txt}',
                             '.htaccess',
                             'images/{,*/}*.{webp,gif}',
-                            'css/fonts/*'
+                            'css/fonts/*',
+                            'js/districts.json'
                         ]
                     }
                 ]

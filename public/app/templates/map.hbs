@@ -1,8 +1,21 @@
-<div class="subpage content-row">
-  <a href="/" class="logo">ATX Votes homepage</a>
+<header role="banner" class="page-header">
+  <div class="content-row">
+    <a href="/" class="logo">ATX Votes</a>
+    <nav role="navigation" class="main-nav">
+      <ul class="menu">
+        <li><a href="/">Address</a></li>
+        <li>{{#link-to "map"}}Map{{/link-to}}</li>
+        <li>{{#link-to "elections"}}All{{/link-to}}</li>
+        <li>{{#link-to "about"}}About{{/link-to}}</li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
+<div class="map-page content-row">
   <div class="page-content">
-    <h2>Map Page</h2>
+    <h2>Map Page<span class="district-name"></span></h2>
+    <div class="map-container"></div>
   </div>
 </div>
 

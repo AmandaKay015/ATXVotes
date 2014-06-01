@@ -70,4 +70,68 @@
     console.log(position);
   }
 
+  function show_district_map(el, colors) {
+    var $map_container = $(el),
+        district_colors = colors;
+
+    var map = new google.maps.Map($map_container[0], {
+      zoom: 10,
+      center: new google.maps.LatLng(30.331227, -97.725019),
+      styles: [{"stylers": [{"saturation": -75},{"lightness": 75}]}],
+      minZoom: 9
+    });
+
+    var file = 'js/districts.json';
+
+    d3.json(file, function(error, data, controller) {
+      console.log(data.features);
+
+      var overlay = new google.maps.OverlayView();
+
+      overlay.onAdd = function () {
+
+        var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "district-overlay");
+
+        var svg = layer.append("svg")
+          .attr("width", $map_container.width())
+          .attr("height", $map_container.height())
+        var adminDivisions = svg.append("g").attr("class", "AdminDivisions");
+
+        overlay.draw = function () {
+          var markerOverlay = this;
+          var overlayProjection = markerOverlay.getProjection();
+
+          // Turn the overlay projection into a d3 projection
+          var googleMapProjection = function (coordinates) {
+            var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
+            var pixelCoordinates = overlayProjection.fromLatLngToDivPixel(googleCoordinates);
+            return [pixelCoordinates.x, pixelCoordinates.y];
+          }
+
+          var path = d3.geo.path().projection(googleMapProjection);
+          adminDivisions.selectAll("path")
+            .data(data.features)
+            .attr("d", path) // update existing paths
+            .attr("class", function(d) { return "district-" + d.properties.DISTRICT_1; })
+            .enter().append("svg:path")
+            .attr("d", path)
+            .attr("stroke", "#ccc")
+            .attr("opacity", "0.75")
+            .attr("fill", function(d) { return district_colors[d.properties.DISTRICT_1]; })
+            .on("click", click_fn);
+        };
+
+        function click_fn(data) {
+          console.log(data.properties.DISTRICT_N);
+          var $thing = $map_container.siblings('h2').find('.district-name');
+
+          $thing.html(": District " + data.properties.DISTRICT_N);
+        }
+      };
+
+      overlay.setMap(map);
+    });
+
+  }
+
 //})(jQuery);
