@@ -19,9 +19,10 @@
 
 Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), function () {
     Route::resource('candidates', 'CandidatesController', array('except' => array('create', 'edit')));
-    // Route::resource('elections', 'ElectionController', array('except' => array('create', 'edit')));
+    Route::resource('elections', 'ElectionController', array('except' => array('create', 'edit')));
     
-    Route::get('/elections/{id}/{district?}', array('uses' => 'ElectionController@show'));
+    /*Route::get('/elections', array('uses' => 'ElectionController@index'));
+    Route::get('/elections/{id}/{district?}', array('uses' => 'ElectionController@show'));*/
 });
 
 
@@ -30,5 +31,6 @@ Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), functio
 =============================================*/
 Route::any('{path?}', function() 
 {
-    return View::make('hello'); // replace hello with index when the time comes
+    // redirect to Ember index
+    Redirect::to('index.php');
 });
