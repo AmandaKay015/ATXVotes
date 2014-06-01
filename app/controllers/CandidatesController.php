@@ -3,14 +3,21 @@
 namespace App\Controllers;
 
 use App\Models\Candidate;
+use App\Models\IssuesSimple;
+use App\Models\IssuesDetail;
 use Response;
 
 class CandidatesController extends \BaseController {
+	
 	private $candidate;
+	private $issuesSimple;
+	private $issuesDetail;
 
-	public function __construct(Candidate $candidate)
+	public function __construct(Candidate $candidate, IssuesSimple $issuesSimple, IssuesDetail $issuesDetail)
 	{
-		$this->candidate = $candidate;
+		$this->candidate    = $candidate;
+		$this->issuesSimple = $issuesSimple;
+		$this->issuesDetail = $issuesDetail;
 	}
 
 	/**
@@ -23,19 +30,7 @@ class CandidatesController extends \BaseController {
 		$data = $this->candidate->all()->toArray();
 
 		return Response::json($data);
-	}
-
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
+	}//END index
 
 	/**
 	 * Store a newly created resource in storage.
@@ -47,7 +42,6 @@ class CandidatesController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Display the specified resource.
 	 *
@@ -56,21 +50,27 @@ class CandidatesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
-	}
+		$data = $this->candidate->find($id)->toArray();
 
+		// get issues for specified candidate
+		$simple = $this->issuesSimple->where('candidate_id', $id)->first();
+		$detail = $this->issuesDetail->where('candidate_id', $id)->first();
+			
+		// make sure issues are not empty
+		if ($simple) {
+			$data['issues_simple'] = $simple->toArray();
+		} else {
+			$data['issues_simple'] = array();
+		}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+		if ($detail) {
+			$data['issues_detail'] = $detail->toArray();
+		} else {
+			$data['issues_detail'] = array();
+		}
 
+		return Response::json($data);
+	}//END show
 
 	/**
 	 * Update the specified resource in storage.
@@ -83,7 +83,6 @@ class CandidatesController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -94,6 +93,4 @@ class CandidatesController extends \BaseController {
 	{
 		//
 	}
-
-
 }

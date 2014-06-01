@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'cognizant',
+			'database'  => 'anotherdb',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

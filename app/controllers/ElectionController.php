@@ -7,34 +7,27 @@ use App\Models\Candidate;
 use Response;
 
 class ElectionController extends \BaseController {
+	
 	private $election;
+	private $candidate;
 
-	public function __construct(Election $election)
+	public function __construct(Election $election, Candidate $candidate)
 	{
-		$this->election = $election;
+		$this->election  = $election;
+		$this->candidate = $candidate;
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Returns an array of Elections
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		//
-	}
+		$data = $this->election->all()->toArray();
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
+		return Response::json($data);
+	}//END index
 
 	/**
 	 * Store a newly created resource in storage.
@@ -46,36 +39,24 @@ class ElectionController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id, $district = null)
 	{
-		$election = $this->election->find($id);
-		$candidateIds = Candidate::getCandidateIds($id);
-		
+		$election     = $this->election->find($id);
+		$candidateIds = $this->candidate->getCandidateIds($id);
+		// $candidates = $election->candidates;
+
+
 		$data = $election->toArray();
 		$data['candidates'] = $candidateIds;
 		
 		return Response::json(array($data));
 	}//END show
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
 
 	/**
 	 * Update the specified resource in storage.
@@ -88,7 +69,6 @@ class ElectionController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -99,6 +79,4 @@ class ElectionController extends \BaseController {
 	{
 		//
 	}
-
-
 }

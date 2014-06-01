@@ -6,12 +6,14 @@ use DB;
 
 class Candidate extends \Eloquent
 {
+    public $timestamps = false;
+
     public function election()
     {
-        $this->belongsTo('Election', 'election_id');
+        $this->hasOne('Election', 'id', 'election_id');
     }
 
-    public static function getCandidateIds($electionId)
+    public function getCandidateIds($electionId)
     {
         $candidates = DB::table('candidates')->select('id')->where('election_id', $electionId)->get();
 

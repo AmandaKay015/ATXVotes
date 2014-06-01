@@ -11,13 +11,6 @@
 |
 */
 
-/*Route::get('/', function()
-{
-	return View::make('hello');
-});*/
-
-Route::get('/', array('uses' => 'App\Controllers\HomeController@showWelcome'));
-
 
 
 /*=============================================
@@ -25,15 +18,17 @@ Route::get('/', array('uses' => 'App\Controllers\HomeController@showWelcome'));
 =============================================*/
 
 Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), function () {
-    Route::resource('candidates', 'CandidatesController');
-    Route::resource('elections', 'ElectionController');
+    Route::resource('candidates', 'CandidatesController', array('except' => array('create', 'edit')));
+    // Route::resource('elections', 'ElectionController', array('except' => array('create', 'edit')));
+    
+    Route::get('/elections/{id}/{district?}', array('uses' => 'ElectionController@show'));
 });
 
 
 /*=============================================
 =                  Catch-All                  =
 =============================================*/
-App::missing(function($exception)
+Route::any('{path?}', function() 
 {
-    return View::make('index');
+    return View::make('hello'); // replace hello with index when the time comes
 });
