@@ -32,5 +32,5 @@ Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), functio
 Route::any('{path?}', function() 
 {
     // redirect to Ember index
-    Redirect::to('index.php');
+    Redirect::to('index.html');
 });
