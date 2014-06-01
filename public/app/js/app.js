@@ -76,7 +76,9 @@
     var map = new google.maps.Map($map_container[0], {
       zoom: 10,
       center: new google.maps.LatLng(30.331227, -97.725019),
-      styles: [{"stylers": [{"saturation": -75},{"lightness": 75}]}],
+      styles: [ { "featureType": "landscape", "stylers": [ { "hue": "#cc00ff" } ] },
+{ "featureType": "road", "stylers": [ { "saturation": -14 }, { "hue": "#ddff00" } ] },
+{ "featureType": "water", "stylers": [ { "hue": "#0091ff" } ] } ],
       minZoom: 9
     });
 

@@ -2,6 +2,25 @@
 @import "layout";
 @import "typography";
 
+.accordion-wrapper {
+  margin-bottom: em-calc(16);
+  .accordion-trigger {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 0 em-calc(14, 20);
+    background-color: #fff;
+  }
+  .accordion-content {
+    display: none;
+    padding: em-calc(20);
+    background-color: rgba(#fff, 0.75);
+    border: 1px solid $light-grey;
+  }
+}
+
 .homepage {
   position: relative;
   text-align: center;
@@ -34,7 +53,7 @@
       position: relative;
       padding: 0 em-calc(14);
       color: $grey;
-      &:hover { color: $blue; }
+      &:hover { color: #066685; }
       &:first-child:after {
         content: "\2022";
         position: absolute;
