@@ -84,3 +84,58 @@
     }
   }
 }
+
+// elections page
+.election-blurb {
+  max-width: 500px;
+  color: $dark-grey;
+}
+.candidate-list {
+  .election-page & { @include grid-row($behavior: nest); }
+  li {
+    @include grid-column(3);
+  }
+  .candidate {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: em-calc(20, 18);
+    color: #fff;
+    img {
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+    .info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: em-calc(14, 20) em-calc(10, 20);
+      background-color: #000;
+      background-color: rgba(0,0,0,0.75);
+      text-align: center;
+      @include translate(0, 16px);
+      @include transition(all 0.3s ease);
+    }
+    .position {
+      display: block;
+      visibility: hidden;
+      @include opacity(0);
+      font-size: 14px;
+      font-weight: normal;
+      color: $light-grey;
+      @include translate(0, 16px);
+      @include transition(all 0.3s ease);
+    }
+    &:hover {
+      color: #fff;
+      .position {
+        visibility: visible;
+        @include opacity(1);
+        @include translate(0, 0);
+      }
+      .info { @include translate(0, 0); }
+    }
+  }
+}

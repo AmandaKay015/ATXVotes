@@ -1,7 +1,12 @@
 @import "base";
 
-html, body, body > div {
+html, body {
   height: 100%;
+}
+
+body > div {
+  height: 100%;
+  overflow-y: scroll;
 }
 
 body {

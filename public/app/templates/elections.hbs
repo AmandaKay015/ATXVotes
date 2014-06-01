@@ -11,23 +11,28 @@
     </nav>
   </div>
 </header>
-<section class="row page-content">
-  <h1>Elections</h1>
-
+<section class="content-row page-content election-page">
   {{#each item in candidates}}
-    <p>Election name: {{item.election.name}}</p>
-    <p>Election description: {{item.election.description}}</p>
+    <div class="election-blurb">
+      <h3>{{item.election.name}}</h3>
+      <p>{{item.election.description}}</p>
+    </div>
 
     <h2>Candidates:</h2>
-    <ul>
+    <ul class="candidate-list menu">
       {{#each candidate in item.candidates}}
-      <li>Name: {{candidate.name}} {{#link-to 'candidate' candidate}}Link{{/link-to}}</li>
+      <li>
+        {{#link-to 'candidate' candidate class="candidate"}}
+          <img {{bind-attr src=candidate.image alt=candidate.name}}>
+          <div class="info">
+            {{candidate.name}}
+            <span class="position">Running for: {{candidate.position}}</span>
+          </div>
+        {{/link-to}}
+      </li>
       {{/each}}
     </ul>
   {{/each}}
 </section>
-
-<ul>
-</ul>
 
 {{outlet}}

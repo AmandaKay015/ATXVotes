@@ -21,7 +21,7 @@ App.Election.FIXTURES = [
   {
     id: 1,
     candidates: [0, 1],
-    name: 'City Council',
+    name: 'Election Name',
     date: '',
     description: 'Something incredible is waiting to be known science, billions upon billions as a patch of light. Apollonius of Perga.'
   }

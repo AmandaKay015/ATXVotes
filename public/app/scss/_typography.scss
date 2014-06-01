@@ -8,11 +8,21 @@ html, body {
 h1, h2, h3, h4 {
   font-family: $heading-font;
   font-weight: normal;
-  margin: 0 0 em-calc(1.1);
 }
 
 h1 {
+  font-size: 40px;
   text-transform: uppercase;
+  margin: 0 0 em-calc(20, 40);
+}
+h2 {
+  font-size: 36px;
+  margin-bottom: em-calc(20, 36);
+}
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 em-calc(10, 20);
 }
 
 .page-content {
@@ -20,6 +30,7 @@ h1 {
     font-size: 18px;
     margin: 0 0 em-calc(20, 18);
   }
+  img { margin: 0 0 em-calc(20); }
   a {
     color: $orange;
     font-weight: bold;
@@ -30,6 +41,22 @@ h1 {
 
 a, a:before, a:after {
   @include transition(color 0.25s ease, background 0.25s ease);
+}
+
+img {
+  max-width: 100%;
+  &.left {
+    float: left;
+    margin: 0 em-calc(14) em-calc(14) 0;
+  }
+  &.right {
+    float: right;
+    margin: 0 0 em-calc(14) em-calc(14);
+  }
+  &.center {
+    display: block;
+    margin: 0 auto em-calc(14);
+  }
 }
 
 .menu {

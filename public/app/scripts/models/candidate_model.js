@@ -11,7 +11,9 @@
 App.Candidate = DS.Model.extend({
   election_id: DS.belongsTo('election', {async: true}),
   district: DS.attr('number'),
+  position: DS.attr('string'),
   name: DS.attr('string'),
+  focus: DS.attr('string'),
   image: DS.attr('string'),
   experience: DS.attr('string'),
   occupation: DS.attr('string'),
@@ -19,8 +21,8 @@ App.Candidate = DS.Model.extend({
   url: DS.attr('string'),
   contact: DS.attr('string'),
   in_office: DS.attr('boolean'),
+  district: DS.attr('number'),
   finance: DS.attr('string'),
-  focus: DS.attr('string'),
   other: DS.attr('string')
 });
 
@@ -40,6 +42,7 @@ App.Candidate.FIXTURES = [
     id: 0,
     election_id: 1,
     district: 1,
+    position: 'Mayor',
     name: 'Ford Prefect',
     image: 'images/ford-prefect.jpg',
     experience: 'Vanquish the impossible, the carbon in our apple pies, muse about, Vangelis the ash of stellar alchemy two ghostly white figures in coveralls and helmets are soflty dancing take root and flourish two ghostly white figures in coveralls and helmets are soflty dancing encyclopaedia galactica rings of Uranus, Flatland emerged into consciousness.',
@@ -55,6 +58,7 @@ App.Candidate.FIXTURES = [
     id: 1,
     election_id: 1,
     district: 1,
+    position: 'City Council',
     name: 'Arthur Dent',
     image: 'images/arthur-dent.jpg',
     experience: 'Vanquish the impossible, the carbon in our apple pies, muse about, Vangelis the ash of stellar alchemy two ghostly white figures in coveralls and helmets are soflty dancing take root and flourish two ghostly white figures in coveralls and helmets are soflty dancing encyclopaedia galactica rings of Uranus, Flatland emerged into consciousness.',
