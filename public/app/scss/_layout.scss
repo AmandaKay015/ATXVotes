@@ -43,7 +43,7 @@ body {
   padding: em-calc(40) 0;
   overflow: hidden;
   .row, .content-row {
-    margin-bottom: em-calc(30);
+    margin-bottom: em-calc(16);
   }
 }
 
@@ -52,13 +52,11 @@ body {
 }
 
 .one-third {
-  @include grid-column($columns: 4, $float: right);
-  .odd & { float: left; }
+  @include grid-column(4);
 }
 .two-thirds {
-  @include grid-column($columns: 8, $float: left);
+  @include grid-column(8);
   max-width: 730px; // to create the larger gutter between two-thirds/one-third content blocks
-  .odd & { float: right; }
 }
 
 @media #{$small-only} {

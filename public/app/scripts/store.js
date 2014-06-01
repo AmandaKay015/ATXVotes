@@ -1,5 +1,5 @@
-App.ApplicationAdapter = DS.FixtureAdapter;
+//App.ApplicationAdapter = DS.FixtureAdapter;
 
-/*App.ApplicationAdapter = DS.RESTAdapter.extend({
+App.ApplicationAdapter = DS.RESTAdapter.extend({
   namespace: 'api'
-});*/
+});

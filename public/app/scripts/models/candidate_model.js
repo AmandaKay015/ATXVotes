@@ -47,7 +47,7 @@ App.Candidate.FIXTURES = [
     image: 'images/ford-prefect.jpg',
     experience: 'Vanquish the impossible, the carbon in our apple pies, muse about, Vangelis the ash of stellar alchemy two ghostly white figures in coveralls and helmets are soflty dancing take root and flourish two ghostly white figures in coveralls and helmets are soflty dancing encyclopaedia galactica rings of Uranus, Flatland emerged into consciousness.',
     occupation: 'Hitchhiker',
-    facebook: '#facebookurl',
+    facebook: '',
     url: 'http://google.com',
     contact: 'email@email.com<br>333-333-3333',
     in_office: true,

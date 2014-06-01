@@ -17,7 +17,7 @@ h1 {
 }
 h2 {
   font-size: 36px;
-  margin-bottom: em-calc(20, 36);
+  margin: 0 0 em-calc(20, 36);
 }
 h3 {
   font-size: 20px;
@@ -36,6 +36,13 @@ h3 {
     font-weight: bold;
     text-decoration: none;
     &:hover { color: $dark-orange; }
+  }
+  .subtitle {
+    display: block;
+    font-family: $heading-font;
+    color: $grey;
+    font-size: 20px;
+    margin: -1em 0 1em;
   }
 }
 
