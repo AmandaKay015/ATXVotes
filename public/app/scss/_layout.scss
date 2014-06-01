@@ -1,0 +1,66 @@
+@import "base";
+
+html, body {
+  height: 100%;
+}
+
+body > div {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hide {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.mobile {
+  display: none;
+  @media #{$small-only} { display: block; }
+}
+
+.row {
+  @include grid-row();
+}
+
+.content-row {
+  @include grid-row($no-columns: true);
+}
+
+.container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100%;
+}
+
+.page-content {
+  padding: em-calc(40) 0;
+  overflow: hidden;
+  .row, .content-row {
+    margin-bottom: em-calc(16);
+  }
+}
+
+.half {
+  @include grid-column(6);
+}
+
+.one-third {
+  @include grid-column(4);
+}
+.two-thirds {
+  @include grid-column(8);
+  max-width: 730px; // to create the larger gutter between two-thirds/one-third content blocks
+}
+
+@media #{$small-only} {
+  .half, .one-third, .two-thirds {
+    width: 100%;
+  }
+}

@@ -1,0 +1,141 @@
+@import "normalize";
+@import "layout";
+@import "typography";
+
+.homepage {
+  position: relative;
+  text-align: center;
+  .logo {
+    display: block;
+    width: 250px;
+    height: 150px;
+    text-indent: -999px;
+    overflow: hidden;
+    background: #888;
+  }
+  .fade-in {
+    position: relative;
+    .submit {
+      margin-left: 6px;
+    }
+  }
+  .or {
+    display: block;
+    margin: em-calc(16) 0 em-calc(8);
+    font-family: $heading-font;
+    color: $grey;
+    &:before, &:after {
+      content: "\2014";
+      padding: 0 em-calc(8);
+    }
+  }
+  .entry-options {
+    a {
+      position: relative;
+      padding: 0 em-calc(14);
+      color: $grey;
+      &:hover { color: $blue; }
+      &:first-child:after {
+        content: "\2022";
+        position: absolute;
+        right: -6px;
+        color: $grey;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.page-header {
+  .logo {
+    float: right;
+    display: block;
+    margin-top: em-calc(14);
+    width: 120px;
+    height: 80px;
+    text-indent: -999px;
+    background: #888;
+    overflow: hidden;
+  }
+  .main-nav {
+    float: right;
+    margin: 0 em-calc(24) em-calc(56) em-calc(130);
+    li {
+      display: inline-block;
+      min-width: 200px;
+      margin-left: -130px;
+    }
+    a {
+      display: block;
+      padding: em-calc(8) em-calc(14);
+      background-color: #fff;
+      color: $dark;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include border-radius(5px 0 0 5px);
+      @include rotate(-45deg);
+      @include transition(all 0.4s ease);
+      &:hover, &:focus {
+        color: #fff;
+        background-color: $orange;
+        @include transform(rotate(-45deg) translate(-20px, 0));
+      }
+    }
+  }
+}
+
+// elections page
+.election-blurb {
+  max-width: 500px;
+  color: $dark-grey;
+}
+.candidate-list {
+  .election-page & { @include grid-row($behavior: nest); }
+  li {
+    @include grid-column(3);
+  }
+  .candidate {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: em-calc(20, 18);
+    color: #fff;
+    img {
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+    .info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: em-calc(14, 20) em-calc(10, 20);
+      background-color: #000;
+      background-color: rgba(0,0,0,0.75);
+      text-align: center;
+      @include translate(0, 16px);
+      @include transition(all 0.3s ease);
+    }
+    .position {
+      display: block;
+      visibility: hidden;
+      @include opacity(0);
+      font-size: 14px;
+      font-weight: normal;
+      color: $light-grey;
+      @include translate(0, 16px);
+      @include transition(all 0.3s ease);
+    }
+    &:hover {
+      color: #fff;
+      .position {
+        visibility: visible;
+        @include opacity(1);
+        @include translate(0, 0);
+      }
+      .info { @include translate(0, 0); }
+    }
+  }
+}
