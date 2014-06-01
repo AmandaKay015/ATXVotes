@@ -1,0 +1,76 @@
+@import "base";
+
+html, body {
+  font-size: 16px;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading-font;
+  font-weight: normal;
+  margin: 0 0 em-calc(1.1);
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.page-content {
+  p, ul, ol {
+    font-size: 18px;
+    margin: 0 0 em-calc(20, 18);
+  }
+  a {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover { color: $dark-orange; }
+  }
+}
+
+a, a:before, a:after {
+  @include transition(color 0.25s ease, background 0.25s ease);
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+form {
+  label {
+    display: none;
+  }
+  input[type=text] {
+    padding: em-calc(8) em-calc(10, 18);
+    background-color: #fff;
+    color: $dark;
+    font-size: 18px;
+    line-height: 1.4;
+    outline: none;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    @include border-radius(5px);
+    &:focus {
+      outline: none;
+      border: 1px solid $orange;
+      @include box-shadow(0 0 5px 0 $orange);
+    }
+    @include placeholder($grey);
+  }
+  .submit {
+    padding: em-calc(8) em-calc(10, 18);
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+    border: none;
+    background-color: $orange;
+    color: #fff;
+    -webkit-appearance: none;
+    @include border-radius(5px);
+    @include transition(color 0.25s ease, background 0.25s ease);
+    &:hover, &:focus {
+      background-color: $dark-orange;
+    }
+  }
+}

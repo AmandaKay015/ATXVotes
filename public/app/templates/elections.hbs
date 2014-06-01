@@ -1,16 +1,31 @@
-<h1>Elections</h1>
+<header role="banner" class="page-header">
+  <div class="content-row">
+    <a href="/" class="logo">ATX Votes</a>
+    <nav role="navigation" class="main-nav">
+      <ul class="menu">
+        <li><a href="/">Address</a></li>
+        <li>{{#link-to "map"}}Map{{/link-to}}</li>
+        <li>{{#link-to "elections"}}All{{/link-to}}</li>
+        <li>{{#link-to "about"}}About{{/link-to}}</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="row page-content">
+  <h1>Elections</h1>
 
-{{#each item in candidates}}
-  <p>Election name: {{item.election.name}}</p>
-  <p>Election description: {{item.election.description}}</p>
+  {{#each item in candidates}}
+    <p>Election name: {{item.election.name}}</p>
+    <p>Election description: {{item.election.description}}</p>
 
-  <h2>Candidates:</h2>
-  <ul>
-    {{#each candidate in item.candidates}}
-    <li>Name: {{candidate.name}} {{#link-to 'candidate'}}Link{{/link-to}}</li>
-    {{/each}}
-  </ul>
-{{/each}}
+    <h2>Candidates:</h2>
+    <ul>
+      {{#each candidate in item.candidates}}
+      <li>Name: {{candidate.name}} {{#link-to 'candidate' candidate}}Link{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</section>
 
 <ul>
 </ul>

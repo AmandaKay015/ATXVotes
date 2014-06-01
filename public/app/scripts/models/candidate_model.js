@@ -1,4 +1,13 @@
 /*global Ember*/
+/*DS.attr.transforms.object = {
+  from: function(serialized) {
+    return Ember.none(serialized) ? {} : serialized;
+  },
+  to: function(deserialized) {
+    return Ember.none(deserialized) ? {} : deserialized;
+  }
+}*/
+
 App.Candidate = DS.Model.extend({
   election_id: DS.belongsTo('election', {async: true}),
   district: DS.attr('number'),
