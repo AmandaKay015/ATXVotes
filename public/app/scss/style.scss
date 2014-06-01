@@ -10,10 +10,17 @@
     width: 250px;
     height: 150px;
     text-indent: -999px;
+    margin: 0 auto;
     overflow: hidden;
-    background: #888;
     background: url(../images/ATXVotes_Logo.png);
     background-size: contain;
+  }
+  .container-rounding {
+    display: block;
+    width: 250px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 20px;
   }
   .fade-in {
     position: relative;
