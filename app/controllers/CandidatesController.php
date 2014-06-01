@@ -1,6 +1,17 @@
 <?php
 
-class CandidatesController extends BaseController {
+namespace App\Controllers;
+
+use App\Models\Candidate;
+use Response;
+
+class CandidatesController extends \BaseController {
+	private $candidate;
+
+	public function __construct(Candidate $candidate)
+	{
+		$this->candidate = $candidate;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +20,7 @@ class CandidatesController extends BaseController {
 	 */
 	public function index()
 	{
-		$data = Candidate::all()->toArray();
+		$data = $this->candidate->all()->toArray();
 
 		return Response::json($data);
 	}

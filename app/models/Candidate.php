@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Models;
+
+use DB;
+
 class Candidate extends \Eloquent
 {
     public function election()

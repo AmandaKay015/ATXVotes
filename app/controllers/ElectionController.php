@@ -1,6 +1,18 @@
 <?php
 
-class ElectionController extends BaseController {
+namespace App\Controllers;
+
+use App\Models\Election;
+use App\Models\Candidate;
+use Response;
+
+class ElectionController extends \BaseController {
+	private $election;
+
+	public function __construct(Election $election)
+	{
+		$this->election = $election;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -43,7 +55,7 @@ class ElectionController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$election = Election::find($id);
+		$election = $this->election->find($id);
 		$candidateIds = Candidate::getCandidateIds($id);
 		
 		$data = $election->toArray();

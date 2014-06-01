@@ -11,7 +11,29 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
+});*/
+
+Route::get('/', array('uses' => 'App\Controllers\HomeController@showWelcome'));
+
+
+
+/*=============================================
+=                  API Routes                 =
+=============================================*/
+
+Route::group(array('prefix' => 'api', 'namespace' => 'App\Controllers'), function () {
+    Route::resource('candidates', 'CandidatesController');
+    Route::resource('elections', 'ElectionController');
+});
+
+
+/*=============================================
+=                  Catch-All                  =
+=============================================*/
+App::missing(function($exception)
+{
+    return View::make('index');
 });
