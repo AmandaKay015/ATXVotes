@@ -120,15 +120,53 @@
   max-width: 500px;
   color: $dark-grey;
 }
+
+.filterby {
+  margin: em-calc(-10) 0 em-calc(36);
+  span {
+    display: inline-block;
+    margin-right: em-calc(8);
+  }
+}
+.filter-btn {
+  display: inline-block;
+  padding: em-calc(4) em-calc(24);
+  margin-left: em-calc(6);
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include border-radius(5px);
+  @include transition(all 0.3s ease);
+  &:hover, &:focus, &.active {
+    background-color: $orange;
+    color: #fff;
+  }
+}
+
 .candidate-list {
   .election-page & { @include grid-row($behavior: nest); }
   li {
     @include grid-column(3);
+    overflow: hidden;
+    @include transition(all 0.4s ease);
+  }
+  // filter css
+  &.mayor .council,
+  &.council .mayor {
+    width: 0;
+    padding: 0;
+    //height: 0;
   }
   .candidate {
     display: block;
     position: relative;
     overflow: hidden;
+    height: 234px;
     margin-bottom: em-calc(20, 18);
     color: #fff;
     img {

@@ -19,9 +19,15 @@
     </div>
 
     <h2>Candidates:</h2>
+    <div class="filterby">
+      <span>Filter by position:</span>
+      <button {{action "setFilterClass" "all" target="view"}} class="filter-btn all active">All</button>
+      <button {{action "setFilterClass" "mayor" target="view"}} class="filter-btn mayor">Mayor</button>
+      <button {{action "setFilterClass" "council" target="view"}} class="filter-btn council">City Council</button>
+    </div>
     <ul class="candidate-list menu">
       {{#each candidate in item.candidates}}
-      <li>
+      <li {{bind-attr class=candidate.position}}>
         {{#link-to 'candidate' candidate class="candidate"}}
           <img {{bind-attr src=candidate.image alt=candidate.name}}>
           <div class="info">
