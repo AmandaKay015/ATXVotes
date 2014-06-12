@@ -31,14 +31,14 @@
     text-indent: -999px;
     margin: 0 auto;
     overflow: hidden;
-    background: url(../images/ATXVotes_Logo.png);
+    background: url(../images/ATXVotes_Logo.png) no-repeat center center;
     background-size: contain;
   }
   .container-rounding {
     display: block;
     width: 250px;
     height: 150px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     border-radius: 20px;
   }
   .fade-in {
@@ -84,7 +84,7 @@
     text-indent: -999px;
     background: #888;
     overflow: hidden;    
-    background: url(../images/ATXVotes_Logo.png);
+    background: url(../images/ATXVotes_Logo.png) no-repeat center center;
     background-size: contain;
   }
   .main-nav {
