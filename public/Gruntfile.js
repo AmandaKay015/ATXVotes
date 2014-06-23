@@ -1,18 +1,21 @@
 // Generated on 2014-05-31 using generator-ember 0.8.3
 'use strict';
 var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (connect, dir) {
+var lrSnippet = require('connect-livereload')({
+    port: LIVERELOAD_PORT
+});
+var mountFolder = function(connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
-
+var path = require('path');
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
 // use this if you want to match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
+
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks
@@ -41,7 +44,8 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: {
-                    livereload: LIVERELOAD_PORT
+                    livereload: true,
+                    spawn: false
                 },
                 files: [
                     '.tmp/scripts/*.js',
@@ -52,46 +56,35 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        connect: {
+        express: {
             options: {
                 port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '*'
             },
             livereload: {
                 options: {
-                    middleware: function (connect) {
-                        return [
-                            lrSnippet,
-                            mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app)
-                        ];
-                    }
+                    server: __dirname + '/REST-API/server.js',
+                    livereload: true,
+                    serverreload: true,
+                    bases: [path.join(__dirname, '.tmp'), path.join(__dirname, yeomanConfig.app)]
                 }
             },
             test: {
                 options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, 'test'),
-                            mountFolder(connect, '.tmp')
-                        ];
-                    }
+                    server: __dirname + '/REST-API/server.js',
+                    bases: [path.join(__dirname, '.tmp'), path.join(__dirname, 'test')]
                 }
             },
             dist: {
                 options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, yeomanConfig.dist)
-                        ];
-                    }
+                    server: __dirname + '/REST-API/server.js',
+                    bases: path.join(__dirname, yeomanConfig.dist)
                 }
             }
         },
         open: {
             server: {
-                path: 'http://localhost:<%= connect.options.port %>'
+                url: 'http://localhost:<%= express.options.port %>/index.html'
             }
         },
         clean: {
@@ -123,7 +116,7 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
+                    urls: ['http://localhost:<%= express.options.port %>/index.html']
                 }
             }
         },
@@ -235,75 +228,71 @@ module.exports = function (grunt) {
             }
         },
         replace: {
-          app: {
-            options: {
-              variables: {
-                ember: 'bower_components/ember/ember.js',
-                ember_data: 'bower_components/ember-data/ember-data.js'
-              }
+            app: {
+                options: {
+                    variables: {
+                        ember: 'bower_components/ember/ember.js',
+                        ember_data: 'bower_components/ember-data/ember-data.js'
+                    }
+                },
+                files: [{
+                    src: '<%= yeoman.app %>/index.html',
+                    dest: '.tmp/index.html'
+                }]
             },
-            files: [
-              {src: '<%= yeoman.app %>/index.html', dest: '.tmp/index.html'}
-            ]
-          },
-          dist: {
-            options: {
-              variables: {
-                ember: 'bower_components/ember/ember.prod.js',
-                ember_data: 'bower_components/ember-data/ember-data.prod.js'
-              }
-            },
-            files: [
-              {src: '<%= yeoman.app %>/index.html', dest: '.tmp/index.html'}
-            ]
-          }
+            dist: {
+                options: {
+                    variables: {
+                        ember: 'bower_components/ember/ember.prod.js',
+                        ember_data: 'bower_components/ember-data/ember-data.prod.js'
+                    }
+                },
+                files: [{
+                    src: '<%= yeoman.app %>/index.html',
+                    dest: '.tmp/index.html'
+                }]
+            }
         },
         // Put files not handled in other tasks here
         copy: {
             fonts: {
-                files: [
-                    { 
-                        expand: true,
-                        flatten: true,
-                        filter: 'isFile',
-                        cwd: '<%= yeoman.app %>/bower_components/',
-                        dest: '<%= yeoman.app %>/css/fonts/',
-                        src: [
-                            'font-awesome/fonts/**' // Font-Awesome
-                        ]
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    filter: 'isFile',
+                    cwd: '<%= yeoman.app %>/bower_components/',
+                    dest: '<%= yeoman.app %>/css/fonts/',
+                    src: [
+                        'font-awesome/fonts/**' // Font-Awesome
+                    ]
+                }]
             },
             data: {
-                files: [
-                    { 
-                        expand: true,
-                        flatten: true,
-                        filter: 'isFile',
-                        cwd: '<%= yeoman.app %>',
-                        dest: '<%= yeoman.app %>',
-                        src: [
-                            'js/districts.json'
-                        ]
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    filter: 'isFile',
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.app %>',
+                    src: [
+                        'js/districts.json'
+                    ]
+                }]
             },
             dist: {
-                files: [
-                    {
-                        expand: true,
-                        dot: true,
-                        cwd: '<%= yeoman.app %>',
-                        dest: '<%= yeoman.dist %>',
-                        src: [
-                            '*.{ico,txt}',
-                            '.htaccess',
-                            'images/{,*/}*.{webp,gif}',
-                            'css/fonts/*',
-                            'js/districts.json'
-                        ]
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        '*.{ico,txt}',
+                        '.htaccess',
+                        'images/{,*/}*.{webp,gif}',
+                        'css/fonts/*',
+                        'js/districts.json'
+                    ]
+                }]
             }
         },
         concurrent: {
@@ -325,7 +314,7 @@ module.exports = function (grunt) {
         },
         emberTemplates: {
             options: {
-                templateName: function (sourceFile) {
+                templateName: function(sourceFile) {
                     var templatePath = yeomanConfig.app + '/templates/';
                     return sourceFile.replace(templatePath, '');
                 }
@@ -339,7 +328,7 @@ module.exports = function (grunt) {
         neuter: {
             app: {
                 options: {
-                    filepathTransform: function (filepath) {
+                    filepathTransform: function(filepath) {
                         return yeomanConfig.app + '/' + filepath;
                     }
                 },
@@ -349,14 +338,14 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('server', function (target) {
+    grunt.registerTask('server', function(target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve:' + target]);
     });
 
-    grunt.registerTask('serve', function (target) {
+    grunt.registerTask('serve', function(target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+            return grunt.task.run(['build', 'open', 'express:dist:keepalive']);
         }
 
         grunt.task.run([
@@ -365,9 +354,10 @@ module.exports = function (grunt) {
             'concurrent:server',
             'neuter:app',
             'copy:fonts',
-            'connect:livereload',
+            'express:livereload',
             'open',
-            'watch'
+            'watch',
+            'express:livereload:keepalive'
         ]);
     });
 
@@ -375,7 +365,7 @@ module.exports = function (grunt) {
         'clean:server',
         'replace:app',
         'concurrent:test',
-        'connect:test',
+        'express:test',
         'neuter:app',
         'mocha'
     ]);

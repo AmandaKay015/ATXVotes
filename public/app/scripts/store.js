@@ -1,5 +1,15 @@
 App.ApplicationAdapter = DS.FixtureAdapter;
 
 /*App.ApplicationAdapter = DS.RESTAdapter.extend({
-  namespace: 'api'
+  url: 'http://localhost:3000',
+  namespace: 'api',
+
+  serializer: DS.RESTSerializer.extend({
+      primaryKey: function(type) {
+          return '_id';
+      }
+      serializeId: function(id) {
+            return id.toString();
+        }
+  })
 });*/
