@@ -6,7 +6,7 @@ var sass = require(relativePath + "node-sass");
 var morgan = require(relativePath + "morgan");
 
 var mongoose = require(relativePath + "mongoose");
-mongoose.connect('mongodb://localhost/CognizantCityATX');
+mongoose.connect('mongodb://localhost:27017/CognizantCityATX');
 
 var app = express();
 
