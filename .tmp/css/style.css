@@ -1,0 +1,1031 @@
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000328}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000338}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000347}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000358}}
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000372}}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000382}}
+body {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000386}}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\0000398}}
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003106}}
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003115}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003128}}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003137}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003146}}
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003154}}
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003162}}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003172}}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003184}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003193}}
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003201}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003209}}
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003218}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003225}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003229}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003241}}
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003249}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003261}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003273}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003284}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003298}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003310}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003322}}
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003337}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003347}}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003357}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003368}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003378}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003387}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003397}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/normalize\.scss}line{font-family:\00003410}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Snippets */
+/* Functions */
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\000033}}
+html, body {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\000037}}
+body > div {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000312}}
+body {
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000317}}
+.hide {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000323}}
+.mobile {
+  display: none;
+}
+@media only screen and (max-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000323}}
+  .mobile {
+    display: block;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000328}}
+.row {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 62.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000034}}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000038}}
+.row:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000332}}
+.content-row {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 62.5em;
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000034}}
+.content-row:before, .content-row:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000038}}
+.content-row:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000336}}
+.container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000342}}
+.page-content {
+  padding: 2.5em 0;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000345}}
+.page-content .row, .page-content .content-row {
+  margin-bottom: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000350}}
+.half {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  width: 50%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000354}}
+.one-third {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  width: 33.33333%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000357}}
+.two-thirds {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  width: 66.66667%;
+  float: left;
+  max-width: 730px;
+}
+
+@media only screen and (max-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_layout\.scss}line{font-family:\0000363}}
+  .half, .one-third, .two-thirds {
+    width: 100%;
+  }
+}
+/* Snippets */
+/* Functions */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?am8r37");
+  src: url("fonts/icomoon.eot?#iefixam8r37") format("embedded-opentype"), url("fonts/icomoon.woff?am8r37") format("woff"), url("fonts/icomoon.ttf?am8r37") format("truetype"), url("fonts/icomoon.svg?am8r37#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000314}}
+html, body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000319}}
+h1, h2, h3, h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000324}}
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000329}}
+h2 {
+  font-size: 36px;
+  margin: 0 0 0.55556em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000333}}
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000339}}
+.icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000352}}
+.page-content p, .page-content ul, .page-content ol {
+  font-size: 18px;
+  margin: 0 0 1.11111em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000356}}
+.page-content img {
+  margin: 0 0 1.25em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000357}}
+.page-content a {
+  color: #c65000;
+  font-weight: bold;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000361}}
+.page-content a:hover {
+  color: #ad4904;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000363}}
+.page-content .subtitle {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  color: #857b74;
+  font-size: 20px;
+  margin: -1em 0 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000372}}
+a, a:before, a:after {
+  -webkit-transition: color 0.25s ease, background 0.25s ease;
+  -moz-transition: color 0.25s ease, background 0.25s ease;
+  -ms-transition: color 0.25s ease, background 0.25s ease;
+  -o-transition: color 0.25s ease, background 0.25s ease;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000376}}
+img {
+  max-width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000378}}
+img.left {
+  float: left;
+  margin: 0 0.875em 0.875em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000382}}
+img.right {
+  float: right;
+  margin: 0 0 0.875em 0.875em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000386}}
+img.center {
+  display: block;
+  margin: 0 auto 0.875em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000392}}
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\0000398}}
+form label {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\00003101}}
+form input[type=text] {
+  padding: 0.5em 0.55556em;
+  background-color: #fff;
+  color: #272727;
+  font-size: 18px;
+  line-height: 1.4;
+  outline: none;
+  border: 1px solid transparent;
+  -webkit-appearance: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\00003111}}
+form input[type=text]:focus {
+  outline: none;
+  border: 1px solid #c65000;
+  -webkit-box-shadow: 0 0 5px 0 #c65000;
+  -moz-box-shadow: 0 0 5px 0 #c65000;
+  box-shadow: 0 0 5px 0 #c65000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\0000349}}
+form input[type=text]::-webkit-input-placeholder {
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\0000353}}
+form input[type=text]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\0000357}}
+form input[type=text]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\0000361}}
+form input[type=text]:-ms-input-placeholder {
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\00003118}}
+form .submit {
+  padding: 0.5em 0.55556em;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: bold;
+  border: none;
+  background-color: #c65000;
+  color: #fff;
+  -webkit-appearance: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: color 0.25s ease, background 0.25s ease;
+  -moz-transition: color 0.25s ease, background 0.25s ease;
+  -ms-transition: color 0.25s ease, background 0.25s ease;
+  -o-transition: color 0.25s ease, background 0.25s ease;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_typography\.scss}line{font-family:\00003129}}
+form .submit:hover, form .submit:focus {
+  background-color: #ad4904;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\000035}}
+.accordion-wrapper {
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\000037}}
+.accordion-wrapper .accordion-trigger {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 0 0.7em;
+  background-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000316}}
+.accordion-wrapper .accordion-content {
+  display: none;
+  padding: 1.25em;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid #e3e3d9;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000324}}
+.homepage {
+  position: relative;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000327}}
+.homepage .logo {
+  display: block;
+  width: 250px;
+  height: 150px;
+  text-indent: -999px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(../images/ATXVotes_Logo.png) no-repeat center center;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000337}}
+.homepage .container-rounding {
+  display: block;
+  width: 250px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000344}}
+.homepage .fade-in {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000346}}
+.homepage .fade-in .submit {
+  margin-left: 6px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000350}}
+.homepage .or {
+  display: block;
+  margin: 1em 0 0.5em;
+  font-family: "Oswald", sans-serif;
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000355}}
+.homepage .or:before, .homepage .or:after {
+  content: "\2014";
+  padding: 0 0.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000361}}
+.homepage .entry-options a {
+  position: relative;
+  padding: 0 0.875em;
+  color: #857b74;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000365}}
+.homepage .entry-options a:hover {
+  color: #066685;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000366}}
+.homepage .entry-options a:first-child:after {
+  content: "\2022";
+  position: absolute;
+  right: -6px;
+  color: #857b74;
+  font-size: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000378}}
+.page-header .logo {
+  float: right;
+  display: block;
+  margin-top: 0.875em;
+  width: 120px;
+  height: 80px;
+  text-indent: -999px;
+  background: #888;
+  overflow: hidden;
+  background: url(../images/ATXVotes_Logo.png) no-repeat center center;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000390}}
+.page-header .main-nav {
+  float: right;
+  margin: 0 1.5em 3.5em 8.125em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000393}}
+.page-header .main-nav li {
+  display: inline-block;
+  min-width: 200px;
+  margin-left: -130px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\0000398}}
+.page-header .main-nav a {
+  display: block;
+  padding: 0.5em 0.875em;
+  background-color: #fff;
+  color: #272727;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003109}}
+.page-header .main-nav a:hover, .page-header .main-nav a:focus {
+  color: #fff;
+  background-color: #c65000;
+  -webkit-transform: rotate(-45deg) translate(-20px, 0);
+  -moz-transform: rotate(-45deg) translate(-20px, 0);
+  -ms-transform: rotate(-45deg) translate(-20px, 0);
+  -o-transform: rotate(-45deg) translate(-20px, 0);
+  transform: rotate(-45deg) translate(-20px, 0);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003119}}
+.election-blurb {
+  max-width: 500px;
+  color: #3f3e3e;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003124}}
+.filterby {
+  margin: -0.625em 0 2.25em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003126}}
+.filterby span {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003131}}
+.filter-btn {
+  display: inline-block;
+  padding: 0.25em 1.5em;
+  margin-left: 0.375em;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003145}}
+.filter-btn:hover, .filter-btn:focus, .filter-btn.active {
+  background-color: #c65000;
+  color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003152}}
+.election-page .candidate-list {
+  width: auto;
+  margin: 0 -0.625em;
+  max-width: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000034}}
+.election-page .candidate-list:before, .election-page .candidate-list:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/_mixins\.scss}line{font-family:\000038}}
+.election-page .candidate-list:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003153}}
+.candidate-list li {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003160}}
+.candidate-list.mayor .council, .candidate-list.council .mayor {
+  width: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003165}}
+.candidate-list .candidate {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 234px;
+  margin-bottom: 1.11111em;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003172}}
+.candidate-list .candidate img {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003177}}
+.candidate-list .candidate .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.7em 0.5em;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  -webkit-transform: translate(0, 16px);
+  -moz-transform: translate(0, 16px);
+  -ms-transform: translate(0, 16px);
+  -o-transform: translate(0, 16px);
+  transform: translate(0, 16px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003189}}
+.candidate-list .candidate .position {
+  display: block;
+  visibility: hidden;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #e3e3d9;
+  -webkit-transform: translate(0, 16px);
+  -moz-transform: translate(0, 16px);
+  -ms-transform: translate(0, 16px);
+  -o-transform: translate(0, 16px);
+  transform: translate(0, 16px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003199}}
+.candidate-list .candidate:hover {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003201}}
+.candidate-list .candidate:hover .position {
+  visibility: visible;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003206}}
+.candidate-list .candidate:hover .info {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/workspace\/CognizantCityATX\/app\/scss\/style\.scss}line{font-family:\00003212}}
+.map-container {
+  width: 100%;
+  height: 500px;
+}
