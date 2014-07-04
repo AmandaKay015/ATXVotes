@@ -1,7 +1,7 @@
-var Election = require("../../models/election-model");
-var Candidate = require("../../models/candidate-model");
+var Election = require("../models/election-model");
+var Candidate = require("../models/candidate-model");
 
-exports.indicies = function(req, res, next) {
+exports.list = function(req, res, next) {
     Election.find({}, function(err, elections) {
         if (err) return next(err);
         res.send({

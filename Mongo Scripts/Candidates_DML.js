@@ -1,12 +1,12 @@
 //load('database.js')
-var db = new Mongo().getDB('CognizantCityATX');
-var candidatesExist = db.getCollection('Candidates').exists();
+var db = new Mongo().getDB('atxvotes');
+var candidatesExist = db.getCollection('candidates').exists();
 if(!candidatesExist) {
-    db.createCollection("Candidates");
+    db.createCollection("candidates");
 
-    db['Candidates'].insert([
+    db['candidates'].insert([
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Steve Adler",
@@ -22,7 +22,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Sheryl Cole",
@@ -38,7 +38,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Mike Martinez",
@@ -54,7 +54,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Todd Phelps",
@@ -70,7 +70,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":7,
             "position":"council member",
             "name":"Jimmy Paver",
@@ -86,7 +86,7 @@ if(!candidatesExist) {
             "other":"$40,000 loan taken out for political expend."
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":7,
             "position":"council member",
             "name":"Melissa Zone",
@@ -102,7 +102,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":8,
             "position":"council member",
             "name":"Becky Bray",
@@ -118,7 +118,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":8,
             "position":"council member",
             "name":"Eliza May",
@@ -134,7 +134,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":8,
             "position":"council member",
             "name":"Darrell Pierce",
@@ -150,7 +150,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":8,
             "position":"council member",
             "name":"Ed Scruggs",
@@ -166,7 +166,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":9,
             "position":"council member",
             "name":"Erin McGann",
@@ -182,7 +182,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":9,
             "position":"council member",
             "name":"Chris Riley",
@@ -198,7 +198,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":9,
             "position":"council member",
             "name":"Kathie Tovo",
@@ -214,7 +214,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Margie Burciaga",
@@ -230,7 +230,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Tina Cannon",
@@ -246,7 +246,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Mandy Dealey",
@@ -262,7 +262,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Sheri Gallo",
@@ -278,7 +278,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Matt Lamon",
@@ -294,7 +294,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":10,
             "position":"council member",
             "name":"Robert Thomas",
@@ -310,7 +310,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Steve Adler",
@@ -326,7 +326,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Sheryl Cole",
@@ -342,7 +342,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Mike Martinez",
@@ -358,7 +358,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Todd Phelps",
@@ -374,7 +374,7 @@ if(!candidatesExist) {
             "other":""
         },
         {
-            "election_id":"general",
+            "election_id": 1,
             "district":0,
             "position":"mayor",
             "name":"Randall Stephens",

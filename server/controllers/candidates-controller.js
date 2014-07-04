@@ -1,6 +1,6 @@
-var Candidate = require("../../models/candidate-model");
+var Candidate = require("../models/candidate-model");
 
-exports.indicies = function(req, res, next) {
+exports.list = function(req, res, next) {
     Candidate.find({}, function(err, candidates) {
         if (err) return next(err);
         res.send({

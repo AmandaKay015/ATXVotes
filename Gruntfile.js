@@ -63,7 +63,7 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    server: __dirname + '/REST-API/server.js',
+                    server: __dirname + '/server/server.js',
                     livereload: true,
                     serverreload: true,
                     bases: [path.join(__dirname, '.tmp'), path.join(__dirname, yeomanConfig.app)]
@@ -71,13 +71,13 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
-                    server: __dirname + '/REST-API/server.js',
+                    server: __dirname + '/server/server.js',
                     bases: [path.join(__dirname, '.tmp'), path.join(__dirname, 'test')]
                 }
             },
             dist: {
                 options: {
-                    server: __dirname + '/REST-API/server.js',
+                    server: __dirname + '/server/server.js',
                     bases: path.join(__dirname, yeomanConfig.dist)
                 }
             }

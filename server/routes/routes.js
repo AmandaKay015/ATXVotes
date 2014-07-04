@@ -1,21 +1,24 @@
 var requireRelativePath = "../../node_modules/";
-
 var namespace = require(requireRelativePath + 'express-namespace');
 
-/*Route Requires*/
-var election = require('./elections/elections-route');
-var candidate = require('./elections/elections-route');
+/* Route Dependencies */
+var election = require('../controllers/elections-controller');
+var candidate = require('../controllers/candidates-controller');
 
 /*API Calls For Ember Namespace Here*/
 module.exports = function(app) {
     app.namespace('/api/', function() {
         /*Elections*/
         app.get('election/:id', election.index);
-        app.get('elections', election.indicies);
+        app.get('elections', election.list);
+        
         /*Candidates*/
         app.get('candidate/:id', candidate.index);
-        app.get('candidates', candidate.indicies);
+        app.get('candidates', candidate.list);
     });
+
+
+
     /*app.get('/@@ember', function(req, res) {
         res.sendfile('ember.js', {
             root: '../app/bower_components/ember/'
