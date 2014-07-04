@@ -8,13 +8,17 @@ var candidate = require('../controllers/candidates-controller');
 /*API Calls For Ember Namespace Here*/
 module.exports = function(app) {
     app.namespace('/api/', function() {
-        /*Elections*/
+        
+        // elections
         app.get('election/:id', election.index);
         app.get('elections', election.list);
         
-        /*Candidates*/
+        // candidates
         app.get('candidate/:id', candidate.index);
         app.get('candidates', candidate.list);
+
+        // districts
+        app.get('district/:id', election.findByDistrict);
     });
 
 

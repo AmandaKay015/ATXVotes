@@ -6,7 +6,11 @@ var Schema   = mongoose.Schema;
 var electionSchema = new Schema({
     name: String,
     date: String,
-    description: String
+    description: String,
+    candidates: [{
+        type: Schema.Types.ObjectId,
+        ref: 'candidate'
+    }]
 });
 
 module.exports = mongoose.model('election', electionSchema);

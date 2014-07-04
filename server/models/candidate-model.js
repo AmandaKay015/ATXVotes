@@ -4,9 +4,9 @@ var mongoose = require(relativePath + 'mongoose');
 var Schema   = mongoose.Schema;
 
 var candidiateSchema = new Schema({
-    election_id: {
-        type: String,
-        required: true
+    election: {
+        type: Number,
+        ref: 'election'
     },
     district: Number,
     position: String,
