@@ -1,0 +1,119 @@
+$row-width: em-calc(1000) !default;
+$total-columns: 12 !default;
+$column-gutter: em-calc(30) !default;
+
+// Grid helper functions
+@function grid-calc($colNumber, $totalColumns) {
+  @return percentage(($colNumber / $totalColumns));
+}
+
+// Grid row mixin
+// $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
+@mixin grid-row($behavior: false, $no-columns: false) {
+
+  // use @include grid-row(nest); to include a nested row
+  @if $behavior == nest {
+    width: auto;
+    margin: 0 #{-($column-gutter/2)};
+    max-width: none;
+  }
+
+  // use @include grid-row(collapse); to collapsed a container row margins
+  @else if $behavior == collapse {
+    width: 100%;
+    margin: 0;
+    max-width: $row-width;
+  }
+
+  // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
+  @else if $behavior == nest-collapse {
+    width: auto;
+    margin: 0;
+    max-width: none;
+  }
+
+  // use @include grid-row; to use a container row
+  @else {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $row-width;
+  }
+
+  // if no columns, give row padding
+  @if $no-columns == true {
+    padding-left: $column-gutter / 2;
+    padding-right: $column-gutter / 2;
+  }
+
+  // Clearfix for all rows
+  @include clearfix();
+}
+
+// Column mixin
+// $columns - The number of columns this should be
+// $last-column - Is this the last column? Default: false.
+// $center - Center these columns? Default: false.
+// $offset - # of columns to offset. Default: false.
+// $collapse - Get rid of gutter padding on column? Default: false.
+// $float - Should this float? Default: true. Options: true, false, left, right.
+// $width - define a custom width, in lieu of passing in a number of columns.
+// $gutter - define a custom gutter to override the default.
+@mixin grid-column(
+  $columns:false,
+  $last-column:false,
+  $center:false,
+  $offset:false,
+  $collapse:false,
+  $float: left,
+  $width: false,
+  $gutter: false) {
+
+  // If collapsed, get rid of gutter padding
+  @if $collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Gutter padding whenever a column isn't set to collapse
+  // (use $collapse:null to do nothing)
+  @else if $collapse == false {
+    // use default gutter if custom gutter is not defined
+    @if $gutter {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
+    @else {
+      padding-left: $column-gutter / 2;
+      padding-right: $column-gutter / 2;
+    }
+  }
+
+  // If a column number is given, calculate width
+  @if $columns {
+    width: grid-calc($columns, $total-columns);
+
+    // If last column, float naturally instead of to the right
+    @if $last-column { float: $opposite-direction; }
+  }
+  // only honor a custom width if columns is false
+  @else if $width {
+    width: $width;
+  }
+
+  @if $float {
+    @if $float == left or $float == true { float: left; }
+    @else if $float == right { float: right; }
+    @else { float: none; }
+  }
+
+  // If centered, get rid of float and add appropriate margins
+  @if $center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+
+  // If offset, calculate appropriate margins
+  @if $offset { margin-#{$float}: grid-calc($offset, $total-columns) !important; }
+
+}

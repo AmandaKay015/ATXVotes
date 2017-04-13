@@ -31,6 +31,10 @@ module.exports = function (grunt) {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
                 tasks: ['emberTemplates']
             },
+            compass: {
+                files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
+                tasks: ['compass:server']
+            },
             neuter: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['neuter']
@@ -42,7 +46,7 @@ module.exports = function (grunt) {
                 files: [
                     '.tmp/scripts/*.js',
                     '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+                    '{.tmp,<%= yeoman.app %>}/css/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
@@ -122,6 +126,27 @@ module.exports = function (grunt) {
                 }
             }
         },
+        compass: {
+            options: {
+                sassDir: '<%= yeoman.app %>/scss',
+                cssDir: '.tmp/css',
+                generatedImagesDir: '.tmp/images/generated',
+                imagesDir: '<%= yeoman.app %>/images',
+                javascriptsDir: '<%= yeoman.app %>/scripts',
+                fontsDir: '<%= yeoman.app %>/css/fonts',
+                importPath: 'app/bower_components',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/css/fonts',
+                relativeAssets: false
+            },
+            dist: {},
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
+        },
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
@@ -138,9 +163,9 @@ module.exports = function (grunt) {
                 files: {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
+                        '<%= yeoman.dist %>/css/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '<%= yeoman.dist %>/styles/fonts/*'
+                        '<%= yeoman.dist %>/css/fonts/*'
                     ]
                 }
             }
@@ -153,7 +178,7 @@ module.exports = function (grunt) {
         },
         usemin: {
             html: ['<%= yeoman.dist %>/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            css: ['<%= yeoman.dist %>/css/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
             }
@@ -181,9 +206,9 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/styles/main.css': [
-                        '.tmp/styles/{,*/}*.css',
-                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                    '<%= yeoman.dist %>/css/main.css': [
+                        '.tmp/css/{,*/}*.css',
+                        '<%= yeoman.app %>/css/{,*/}*.css'
                     ]
                 }
             }
@@ -242,9 +267,8 @@ module.exports = function (grunt) {
                         flatten: true,
                         filter: 'isFile',
                         cwd: '<%= yeoman.app %>/bower_components/',
-                        dest: '<%= yeoman.app %>/styles/fonts/',
-                        src: [ 
-                            'bootstrap-sass/dist/fonts/**', // Bootstrap
+                        dest: '<%= yeoman.app %>/css/fonts/',
+                        src: [
                             'font-awesome/fonts/**' // Font-Awesome
                         ]
                     }
@@ -261,7 +285,7 @@ module.exports = function (grunt) {
                             '*.{ico,txt}',
                             '.htaccess',
                             'images/{,*/}*.{webp,gif}',
-                            'styles/fonts/*'
+                            'css/fonts/*'
                         ]
                     }
                 ]
@@ -270,12 +294,15 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'emberTemplates',
+                'compass:server'
             ],
             test: [
                 'emberTemplates',
+                'compass'
             ],
             dist: [
                 'emberTemplates',
+                'compass:dist',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
